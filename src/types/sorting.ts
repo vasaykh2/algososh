@@ -22,7 +22,7 @@ export type TRandomArrayOptions = {
     maxLength: number;
 }
 
-export enum SortingWay {
+export enum Sorting {
     Bubble = "bubble",
     Selection = "selection",
 }
