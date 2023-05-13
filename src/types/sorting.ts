@@ -1,28 +1,28 @@
-import {ElementStates} from "./element-states";
-import React from "react";
+import { ElementStates } from './element-states';
+import React from 'react';
 
 export type TCharElement = {
-    char: string;
-    id: number | string;
-    state?: ElementStates;
-    head?: string | React.ReactElement;
-    tail?: string | React.ReactElement;
-}
+  char: string;
+  id: number | string;
+  state?: ElementStates;
+  head?: string | React.ReactElement;
+  tail?: string | React.ReactElement;
+};
 
 export type TBarElement = {
-    number: number,
-    id: number,
-    state?: ElementStates;
-}
+  number: number;
+  id: number;
+  state?: ElementStates;
+};
 
 export type TRandomArrayOptions = {
-    minNumber: number;
-    maxNumber: number;
-    minLength: number;
-    maxLength: number;
-}
+  minNumber: number;
+  maxNumber: number;
+  minLength: number;
+  maxLength: number;
+};
 
 export enum Sorting {
-    Bubble = "bubble",
-    Selection = "selection",
+  Bubble = 'bubble',
+  Selection = 'selection',
 }
