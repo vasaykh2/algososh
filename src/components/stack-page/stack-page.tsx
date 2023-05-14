@@ -94,12 +94,12 @@ export const StackPage: React.FC = () => {
             isLimitText
             extraClass={styles.input}
           />
-          <div className={styles.directionButtons}>
+          <div className={styles.buttons}>
             <Button
               text="Добавить"
               extraClass={styles.button}
               onClick={visualizePushing}
-              disabled={!value || loader !== null || stack.getSize() >= 11}
+              disabled={!value || loader !== null || stack.getSize() >= 10}
               isLoader={loader === Action.Add}
             />
             <Button
@@ -109,15 +109,17 @@ export const StackPage: React.FC = () => {
               disabled={!stack.peak() || loader !== null}
               isLoader={loader === Action.Delete}
             />
+            <div className={styles.buttonClear}>
+              <Button
+                text="Очистить"
+                extraClass={styles.button}
+                onClick={clearStack}
+                disabled={!stack.peak() || loader !== null}
+              />
+            </div>
           </div>
-          <Button
-            text="Очистить"
-            extraClass={styles.button}
-            onClick={clearStack}
-            disabled={!stack.peak() || loader !== null}
-          />
         </fieldset>
-        <div className={styles.algorithm}>
+        <div className={styles.stack}>
           {stackElements.length > 0 &&
             stackElements.map((element, index) => (
               <Circle
