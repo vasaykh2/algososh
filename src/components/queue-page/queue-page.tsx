@@ -18,7 +18,7 @@ import styles from './queue-page.module.css';
 export const QueuePage: React.FC = () => {
   const [value, setValue] = useState('');
   const [queueElements, setQueueElements] = useState<TCharElement[]>([]);
-  const [loader, setLoaderPosition] = useState<Action | null>(null);
+  const [loader, setLoader] = useState<Action | null>(null);
 
   const queue = useMemo(() => new Queue<string>(7), []);
 
@@ -102,17 +102,17 @@ export const QueuePage: React.FC = () => {
   };
 
   const visualizeEnqueuing = async () => {
-    setLoaderPosition(Action.Add);
+    setLoader(Action.Add);
     queue.enqueue(value);
     await addElement();
-    setLoaderPosition(null);
+    setLoader(null);
   };
 
   const visualizeDequeuing = async () => {
-    setLoaderPosition(Action.Delete);
+    setLoader(Action.Delete);
     await deleteElement();
     queue.dequeue();
-    setLoaderPosition(null);
+    setLoader(null);
   };
 
   return (
