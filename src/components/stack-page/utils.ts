@@ -5,7 +5,7 @@ type TStack<T> = {
   clear: () => void;
   peak: () => void;
   getSize: () => number;
-}
+};
 
 export class Stack<T> implements TStack<T> {
   private container: T[] = [];

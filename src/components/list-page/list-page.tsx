@@ -55,7 +55,7 @@ export const ListPage: React.FC = () => {
     });
     setListElements(cloneState(listElements));
     await timeoutPromise(SHORT_DELAY_IN_MS);
-    //console.log(listElements);
+
     listElements[0].head = 'head';
     listElements[0].state = ElementStates.Modified;
     const node = list.getHead();
@@ -191,7 +191,7 @@ export const ListPage: React.FC = () => {
 
     listElements.splice(position, 1);
     changeElementsState(listElements, ElementStates.Default);
-    setListElements(cloneState(listElements));    
+    setListElements(cloneState(listElements));
   };
 
   const visualizeInserting = async (index: number, loader: Action) => {
