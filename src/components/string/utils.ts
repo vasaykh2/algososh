@@ -29,3 +29,10 @@ export const reverse = async (
     end--;
   }
 };
+
+export const assembleElementsArray = (value: string): TCharElement[] =>
+  value.split("").map((char, index) => ({
+    char,
+    id: index,
+    state: ElementStates.Default,
+  }));
