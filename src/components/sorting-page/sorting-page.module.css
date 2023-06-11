@@ -1,0 +1,42 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'radio direction generate'
+    'algorithm algorithm algorithm';
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.radioButtons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 50px;
+  grid-area: radio;
+  justify-self: right;
+}
+
+.directionButtons {
+  display: flex;
+  gap: 12px;
+  margin-right: 80px;
+  grid-area: direction;
+}
+
+.button {
+  width: 202px;
+}
+
+.generateButton {
+  grid-area: generate;
+  justify-self: left;
+}
+
+.algorithm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  grid-area: algorithm;
+  height: 370px;
+}
