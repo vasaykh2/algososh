@@ -40,7 +40,7 @@ export const sortBubble = async (
 };
 
 export const sortSelection = async (
-  array: TBarElement[],
+  array: TBarElement[] | [],
   direction: Direction,
   state: React.Dispatch<React.SetStateAction<TBarElement[]>>,
   timeout: number
@@ -82,8 +82,10 @@ export const sortSelection = async (
     }
     state(cloneState(array));
   }
+  if(array.length > 0) {
   changeElementsState([array[array.length - 1]], ElementStates.Modified);
   state(cloneState(array));
+  }
 };
 
 export const generateArray = (options: TRandomArrayOptions): TBarElement[] => {

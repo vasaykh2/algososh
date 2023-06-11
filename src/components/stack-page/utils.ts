@@ -1,4 +1,4 @@
-type TStack<T> = {
+export type TStack<T> = {
   getStack: () => T[];
   push: (item: T) => void;
   pop: () => void;
