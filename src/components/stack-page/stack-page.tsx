@@ -85,7 +85,7 @@ export const StackPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Стек">
-      <div className={styles.wrapper}>
+      <div data-testid="stack" className={styles.wrapper}>
         <fieldset className={styles.fieldset}>
           <Input
             value={value}

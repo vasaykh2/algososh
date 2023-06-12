@@ -1,16 +1,16 @@
-import React from "react";
-import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Marquee from 'react-fast-marquee';
+import { Link } from 'react-router-dom';
 
-import styles from "./main-page.module.css";
+import styles from './main-page.module.css';
 
 interface MainPageProps {
   extraClass?: string;
 }
 
-export const MainPage: React.FC<MainPageProps> = ({ extraClass = "" }) => {
+export const MainPage: React.FC<MainPageProps> = ({ extraClass = '' }) => {
   return (
-    <main className={`${styles.content} ${extraClass}`}>
+    <main data-testid="main" className={`${styles.content} ${extraClass}`}>
       <div className={styles.title_box}>
         <h1 className={`text text_type_h1 text_color_h1 ${styles.title}`}>
           МБОУ АЛГОСОШ

@@ -32,13 +32,14 @@ export const StringComponent: React.FC = () => {
 
   return (
     <SolutionLayout title="Строка">
-      <div className={styles.wrapper}>
+      <div data-testid="recursion" className={styles.wrapper}>
         <Input
           value={value}
           onChange={(evt) => setValue(evt.currentTarget.value)}
           maxLength={11}
           isLimitText
           extraClass={styles.input}
+          data-testid="value-input"
         />
         <Button
           onClick={visualizeAlgorithm}
@@ -46,6 +47,7 @@ export const StringComponent: React.FC = () => {
           extraClass={styles.button}
           isLoader={isLoader}
           disabled={!value}
+          data-testid="button"
         />
         <div className={styles.algorithm}>
           {sortingElements.length > 0 &&

@@ -117,7 +117,7 @@ export const QueuePage: React.FC = () => {
 
   return (
     <SolutionLayout title="Очередь">
-      <div className={styles.wrapper}>
+      <div data-testid="queue" className={styles.wrapper}>
         <div className={styles.fieldset}>
           <Input
             value={value}

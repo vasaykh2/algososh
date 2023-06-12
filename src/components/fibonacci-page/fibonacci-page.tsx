@@ -32,7 +32,7 @@ export const FibonacciPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Последовательность Фибоначчи">
-      <div className={styles.wrapper}>
+      <div data-testid="fibonacci" className={styles.wrapper}>
         <Input
           value={value}
           onChange={(evt) => setValue(evt.currentTarget.value)}

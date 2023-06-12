@@ -221,7 +221,7 @@ export const ListPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Связный список">
-      <div className={styles.wrapper}>
+      <div data-testid="list" className={styles.wrapper}>
         <fieldset className={styles.fieldset}>
           <Input
             maxLength={4}
