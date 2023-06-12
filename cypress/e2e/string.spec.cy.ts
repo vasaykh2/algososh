@@ -5,7 +5,6 @@ import {
   circleCore,
   valueInput,
 } from '../../src/constants/test-constants';
-import { SHORT_DELAY_IN_MS } from '../../src/constants/delays';
 
 describe('String page', () => {
   beforeEach(() => cy.visit(`${testUrl}/recursion`));
@@ -35,8 +34,6 @@ describe('String page', () => {
       }
     });
 
-    cy.wait(SHORT_DELAY_IN_MS);
-
     cy.get('@circle').each((circle, index) => {
       if (index === 0 || index === 4) {
         cy.wrap(circle).should('have.css', 'border', CircleBorder.Modified);
@@ -57,8 +54,6 @@ describe('String page', () => {
         cy.wrap(circle).should('have.css', 'border', CircleBorder.Changing);
       }
     });
-
-    cy.wait(SHORT_DELAY_IN_MS);
 
     cy.get('@circle').each((circle, index) => {
       if (index === 1 || index === 3) {
@@ -81,8 +76,6 @@ describe('String page', () => {
       }
     });
 
-    cy.wait(SHORT_DELAY_IN_MS);
-
     cy.get('@circle').each((circle, index) => {
       if (index === 2) {
         cy.wrap(circle).should('have.css', 'border', CircleBorder.Modified);
@@ -94,8 +87,6 @@ describe('String page', () => {
         cy.wrap(circle).should('contain', '3');
       }
     });
-
-    cy.wait(SHORT_DELAY_IN_MS);
 
     cy.get(valueInput).should('have.value', '12345');
     cy.get(button).should('not.be.disabled');
