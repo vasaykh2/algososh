@@ -41,6 +41,7 @@ export const FibonacciPage: React.FC = () => {
           max={19}
           isLimitText
           extraClass={styles.input}
+          data-testid="value-input"
         />
         <Button
           onClick={visualizeAlgorithm}
@@ -48,6 +49,7 @@ export const FibonacciPage: React.FC = () => {
           extraClass={styles.button}
           isLoader={isLoader}
           disabled={Number(value) < 0 || Number(value) > 19 || value === ''}
+          data-testid="button"
         />
         <div className={styles.algorithm}>
           {fibonacciArray.length > 0 &&
