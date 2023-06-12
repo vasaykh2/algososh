@@ -1,4 +1,4 @@
-import { testUrl, valueInput, button, circleCore } from '../../src/constants/test-constants';;
+import { testUrl, valueInput, button, circleCore } from '../../src/constants/test-constants';
 
 describe('Fibonacci page', () => {
   beforeEach(() => cy.visit(`${testUrl}/fibonacci`));
