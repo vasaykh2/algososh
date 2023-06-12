@@ -3,6 +3,7 @@
 exports[`Button Should render with disable state 1`] = `
 <button
   className="text text_type_button text_color_primary button undefined false "
+  data-testid="button"
   disabled={true}
   type="button"
 >
@@ -15,6 +16,7 @@ exports[`Button Should render with disable state 1`] = `
 exports[`Button Should render with loader 1`] = `
 <button
   className="text text_type_button text_color_primary button undefined loader "
+  data-testid="button"
   disabled={true}
   type="button"
 >
@@ -29,6 +31,7 @@ exports[`Button Should render with loader 1`] = `
 exports[`Button Should render with text 1`] = `
 <button
   className="text text_type_button text_color_primary button undefined false "
+  data-testid="button"
   type="button"
 >
   <p
@@ -42,6 +45,7 @@ exports[`Button Should render with text 1`] = `
 exports[`Button Should render without text 1`] = `
 <button
   className="text text_type_button text_color_primary button undefined false "
+  data-testid="button"
   type="button"
 >
   <p
