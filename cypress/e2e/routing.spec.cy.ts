@@ -1,8 +1,6 @@
-import { testUrl } from '../../src/constants/test-constants';
-
 describe('Routing app', () => {
   before(function () {
-    cy.visit(testUrl);
+    cy.visit('/');
   });
 
   it('Should open all pages', function () {
@@ -15,7 +13,7 @@ describe('Routing app', () => {
       'list',
     ];
 
-    cy.visit(`${testUrl}/`);
+    cy.visit('/');
 
     pages.forEach((page) => {
       cy.get(`a[href*="${page}"]`).click();
