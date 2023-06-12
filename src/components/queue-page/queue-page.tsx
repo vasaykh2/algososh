@@ -125,6 +125,7 @@ export const QueuePage: React.FC = () => {
             maxLength={4}
             isLimitText
             extraClass={styles.input}
+            data-testid="value-input"
           />
           <div className={styles.buttons}>
             <Button
@@ -137,6 +138,7 @@ export const QueuePage: React.FC = () => {
                 !value
               }
               isLoader={loader === Action.Add}
+              data-testid="add-button"
             />
             <Button
               text="Удалить"
@@ -144,6 +146,7 @@ export const QueuePage: React.FC = () => {
               onClick={visualizeDequeuing}
               disabled={queue.getLength() === 0 || loader !== null}
               isLoader={loader === Action.Delete}
+              data-testid="delete-button"
             />
             <div className={styles.buttonClear}>
               <Button
@@ -151,6 +154,7 @@ export const QueuePage: React.FC = () => {
                 extraClass={styles.button}
                 onClick={clearQueue}
                 disabled={queue.getLength() === 0 || loader !== null}
+                data-testid="clear-button"
               />
             </div>
           </div>
