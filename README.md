@@ -14,3 +14,4 @@
 - cypress
 
 Ссылка на "МБОУ АЛГОСОШ им. Фибоначчи" в GitHub Pages: https://vasaykh2.github.io/algososh/.
+ 
