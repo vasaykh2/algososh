@@ -221,7 +221,7 @@ export const ListPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Связный список">
-      <div className={styles.wrapper}>
+      <div data-testid="list" className={styles.wrapper}>
         <fieldset className={styles.fieldset}>
           <Input
             maxLength={4}
@@ -229,6 +229,7 @@ export const ListPage: React.FC = () => {
             extraClass={styles.input}
             value={value}
             onChange={(evt) => setValue(evt.currentTarget.value)}
+            data-testid="value-input"
           />
           <Button
             text="Добавить в head"
@@ -236,6 +237,7 @@ export const ListPage: React.FC = () => {
             onClick={() => visualizeInserting(0, Action.AddAtHead)}
             disabled={list.getSize() === 10 || loader !== null || !value}
             isLoader={loader === Action.AddAtHead}
+            data-testid="add-head-button"
           />
           <Button
             text="Добавить в tail"
@@ -243,6 +245,7 @@ export const ListPage: React.FC = () => {
             onClick={visualizeInsertingAtTail}
             disabled={list.getSize() === 10 || loader !== null || !value}
             isLoader={loader === Action.AddAtTail}
+            data-testid="add-tail-button"
           />
           <Button
             text="Удалить из head"
@@ -250,6 +253,7 @@ export const ListPage: React.FC = () => {
             onClick={() => visualizeRemoving(0, Action.DeleteFromHead)}
             disabled={list.getSize() === 0 || loader !== null}
             isLoader={loader === Action.DeleteFromHead}
+            data-testid="delete-head-button"
           />
           <Button
             text="Удалить из tail"
@@ -259,6 +263,7 @@ export const ListPage: React.FC = () => {
             }
             disabled={list.getSize() === 0 || loader !== null}
             isLoader={loader === Action.DeleteFromTail}
+            data-testid="delete-tail-button"
           />
         </fieldset>
         <fieldset className={styles.fieldset}>
@@ -272,6 +277,7 @@ export const ListPage: React.FC = () => {
             placeholder="Введите индекс"
             value={indexValue}
             onChange={(evt) => setIndexValue(evt.currentTarget.value)}
+            data-testid="index-input"
           />
           <Button
             text="Добавить по индексу"
@@ -285,6 +291,7 @@ export const ListPage: React.FC = () => {
               !value
             }
             isLoader={loader === Action.AddAt}
+            data-testid="add-index-button"
           />
           <Button
             text="Удалить по индексу"
@@ -300,6 +307,7 @@ export const ListPage: React.FC = () => {
               loader !== null
             }
             isLoader={loader === Action.DeleteFrom}
+            data-testid="delete-index-button"
           />
         </fieldset>
         <div className={styles.list}>

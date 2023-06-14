@@ -85,7 +85,7 @@ export const StackPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Стек">
-      <div className={styles.wrapper}>
+      <div data-testid="stack" className={styles.wrapper}>
         <fieldset className={styles.fieldset}>
           <Input
             value={value}
@@ -93,6 +93,7 @@ export const StackPage: React.FC = () => {
             maxLength={4}
             isLimitText
             extraClass={styles.input}
+            data-testid="value-input"
           />
           <div className={styles.buttons}>
             <Button
@@ -101,6 +102,7 @@ export const StackPage: React.FC = () => {
               onClick={visualizePushing}
               disabled={!value || loader !== null || stack.getSize() >= 10}
               isLoader={loader === Action.Add}
+              data-testid="add-button"
             />
             <Button
               text="Удалить"
@@ -108,6 +110,7 @@ export const StackPage: React.FC = () => {
               onClick={visualizePopping}
               disabled={!stack.peak() || loader !== null}
               isLoader={loader === Action.Delete}
+              data-testid="delete-button"
             />
             <div className={styles.buttonClear}>
               <Button
@@ -115,6 +118,7 @@ export const StackPage: React.FC = () => {
                 extraClass={styles.button}
                 onClick={clearStack}
                 disabled={!stack.peak() || loader !== null}
+                data-testid="clear-button"
               />
             </div>
           </div>
