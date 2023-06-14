@@ -1,5 +1,4 @@
 import {
-  testUrl,
   button,
   CircleBorder,
   circleCore,
@@ -7,7 +6,7 @@ import {
 } from '../../src/constants/test-constants';
 
 describe('String page', () => {
-  beforeEach(() => cy.visit(`${testUrl}/recursion`));
+  beforeEach(() => cy.visit('recursion'));
 
   it('Should block the button while the input is empty', function () {
     cy.get(valueInput).should('have.value', '');

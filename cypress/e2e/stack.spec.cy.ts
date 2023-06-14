@@ -1,5 +1,4 @@
-import {
-  testUrl,
+import {  
   addButton,
   CircleBorder,
   circleCore,
@@ -11,7 +10,7 @@ import {
 } from '../../src/constants/test-constants';
 
 describe('Stack page', () => {
-  beforeEach(() => cy.visit(`${testUrl}/stack`));
+  beforeEach(() => cy.visit('stack'));
 
   it('Should block the add button while the input is empty', function () {
     cy.get(valueInput).should('have.value', '');

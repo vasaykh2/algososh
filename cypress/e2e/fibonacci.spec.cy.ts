@@ -1,7 +1,7 @@
-import { testUrl, valueInput, button, circleCore } from '../../src/constants/test-constants';
+import { valueInput, button, circleCore } from '../../src/constants/test-constants';
 
 describe('Fibonacci page', () => {
-  beforeEach(() => cy.visit(`${testUrl}/fibonacci`));
+  beforeEach(() => cy.visit('fibonacci'));
 
   it('Should block the button while the input is empty', function () {
     cy.get(valueInput).should('have.value', '');

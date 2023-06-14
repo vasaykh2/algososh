@@ -1,5 +1,4 @@
 import {
-  testUrl,
   CircleBorder,
   valueInput,
   indexInput,
@@ -16,7 +15,7 @@ import {
 } from '../../src/constants/test-constants';
 
 describe('List page', () => {
-  beforeEach(() => cy.visit(`${testUrl}/list`));
+  beforeEach(() => cy.visit('list'));
 
   it('Should block the buttons while the inputs are empty', function () {
     cy.get(valueInput).should('have.value', '');
