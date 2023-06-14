@@ -14,4 +14,4 @@
 - cypress
 
 Ссылка на "МБОУ АЛГОСОШ им. Фибоначчи" в GitHub Pages: https://vasaykh2.github.io/algososh/.
- 
+Ссылка на surge.sh: https://thirsty-lunchroom.surge.sh/.
