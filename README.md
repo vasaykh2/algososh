@@ -27,5 +27,5 @@
 - jest, react-testing-library
 - cypress
 
-* [Ссылка на "МБОУ АЛГОСОШ им. Фибоначчи" в GitHub Pages] (https://vasaykh2.github.io/algososh/)
-* [Ссылка в vercel.com] (https://algososh-omega.vercel.app/)
+* [Ссылка на "МБОУ АЛГОСОШ им. Фибоначчи" в GitHub Pages](https://vasaykh2.github.io/algososh/)
+* [Ссылка в vercel.com](https://algososh-omega.vercel.app/)
